@@ -9,6 +9,10 @@ class MainPage extends Component {
         <Link to='/sorting-algorithm-visualizer'>
           Visualize Sorting Algorithms
         </Link>
+        <br />
+        <Link to='/seaching-algorithm-visualizer'>
+          Visualize Searching Algorithms
+        </Link>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Visualizer from "../Visualizer/SortingVisualizer";
+import SortingVisualizer from "../Visualizer/SortingVisualizer";
 
 class SortingAlgorithmVisualizer extends Component {
   render() {
-    return <Visualizer />;
+    return <SortingVisualizer />;
   }
 }
 

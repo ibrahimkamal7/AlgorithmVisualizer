@@ -5,7 +5,7 @@ import { getQuickSortAnimations } from "../Algorithms/SortingAlgorithms/QuickSor
 import { getMergeSortAnimations } from "../Algorithms/SortingAlgorithms/MergeSort.js";
 import { getHeapSortAnimations } from "../Algorithms/SortingAlgorithms/HeapSort.js";
 
-export default class Visualizer extends React.Component {
+export default class SortingVisualizer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,10 +17,13 @@ export default class Visualizer extends React.Component {
       compareColor: "salmon",
       sortedColor: "turquoise",
       speed: 5,
+      length: 38,
     };
+    this.changeSize = this.changeSize.bind(this);
   }
 
   componentDidMount() {
+    document.getElementById("length").value = 38;
     this.createNewArray();
   }
 
@@ -28,7 +31,7 @@ export default class Visualizer extends React.Component {
     const initialArray = [];
     const initialArray1 = [];
     const initialArray2 = [];
-    for (let i = 0; i < 38; i++) {
+    for (let i = 0; i < this.state.length; i++) {
       const value = randomIntFromInterval(5, 400);
       initialArray.push(value);
       initialArray1.push(value);
@@ -57,11 +60,13 @@ export default class Visualizer extends React.Component {
     document.getElementById("heap").disabled = true;
     document.getElementById("merge").disabled = true;
     document.getElementById("bubble").disabled = true;
+    document.getElementById("length").disabled = true;
   }
 
   enableButtons() {
     document.getElementById("generate").disabled = false;
     document.getElementById("go").disabled = false;
+    document.getElementById("length").disabled = false;
     if (document.getElementById("quick").checked)
       document.getElementById("quick").disabled = false;
     if (document.getElementById("heap").checked)
@@ -95,6 +100,11 @@ export default class Visualizer extends React.Component {
         }
       }
     }
+  }
+
+  changeSize(e) {
+    this.state.length = e.target.value;
+    this.createNewArray();
   }
 
   areSorted(arrayPosition) {
@@ -325,6 +335,14 @@ export default class Visualizer extends React.Component {
           <button id='generate' onClick={() => this.createNewArray()}>
             Generate New Array
           </button>
+          <label htmlFor='size'>Size: </label>
+          <input
+            type='range'
+            min='10'
+            max='38'
+            id='length'
+            onChange={this.changeSize}
+          ></input>
           <input
             className='checkboxes'
             id='merge'
@@ -365,8 +383,13 @@ export default class Visualizer extends React.Component {
             Visualize Algorithms
           </button>
         </div>
+        <div className='info'>
+          <p id='infoContainer0'></p>
+          <p id='infoContainer1'></p>
+          <p id='infoContainer2'></p>
+        </div>
         <div id='bigcontainer'>
-          <div className='container'>
+          <div className='container' style={{ border: "2px solid black" }}>
             {this.state.initialArray.map((value, idx) => (
               <div
                 className='bars'
@@ -382,7 +405,7 @@ export default class Visualizer extends React.Component {
               ></div>
             ))}
           </div>
-          <div className='separator'></div>
+
           <div className='container1'>
             {this.state.initialArray1.map((value, idx) => (
               <div
@@ -399,7 +422,7 @@ export default class Visualizer extends React.Component {
               ></div>
             ))}
           </div>
-          <div className='separator'></div>
+
           <div className='container2'>
             {this.state.initialArray2.map((value, idx) => (
               <div
@@ -416,11 +439,6 @@ export default class Visualizer extends React.Component {
               ></div>
             ))}
           </div>
-        </div>
-        <div className='info'>
-          <p id='infoContainer0'></p>
-          <p id='infoContainer1'></p>
-          <p id='infoContainer2'></p>
         </div>
       </div>
     );
