@@ -1,5 +1,6 @@
 import React from "react";
 import { getLinearSearchAnimations } from "../Algorithms/SearchingAlgorithms/LinearSearch.js";
+import { getBinarySearchAnimations } from "../Algorithms/SearchingAlgorithms/BinarySearch.js";
 import "../styles/SearchingVisualizer.css";
 export default class SearchingVisualizer extends React.Component {
   constructor(props) {
@@ -84,6 +85,65 @@ export default class SearchingVisualizer extends React.Component {
       }
     }
   }
+
+  binarySearch() {
+    this.sort();
+    console.log("1");
+    const number = document.getElementById("number").value;
+    if (number === "") {
+      alert("Please enter a number to be searched");
+    } else {
+      this.disableButtons();
+      document.getElementById("info").innerHTML = "";
+      const arrayBars = document.getElementsByClassName("bars");
+      for (var i = 0; i < arrayBars.length; i++) {
+        arrayBars[i].style.backgroundColor = "black";
+      }
+      const animations = getBinarySearchAnimations(
+        this.state.initialArray,
+        parseInt(number)
+      );
+      console.log(animations);
+      for (let i = 0; i < animations.length; i++) {
+        const [idx, found] = animations[i];
+        if (found) {
+          setTimeout(() => {
+            arrayBars[idx].style.backgroundColor = "green";
+            document.getElementById("info").innerHTML =
+              "Entered number found at index " + idx;
+            this.enableButtons();
+          }, i * 1000);
+          break;
+        } else {
+          setTimeout(() => {
+            if (i === animations.length - 1) {
+              document.getElementById("info").innerHTML =
+                "Entered number not found in the array";
+              this.enableButtons();
+            }
+            arrayBars[idx].style.backgroundColor = "blue";
+          }, i * 1000);
+        }
+      }
+    }
+  }
+
+  sort() {
+    const arrayBarsValue = document.getElementsByClassName("value");
+    for (var i = 0; i < this.state.initialArray.length; i++) {
+      for (var j = 0; j < this.state.initialArray.length - i - 1; j++) {
+        if (this.state.initialArray[j] > this.state.initialArray[j + 1]) {
+          var temp = this.state.initialArray[j];
+          this.state.initialArray[j] = this.state.initialArray[j + 1];
+          this.state.initialArray[j + 1] = temp;
+        }
+      }
+    }
+
+    for (var k = 0; k < this.state.initialArray.length; k++) {
+      arrayBarsValue[k].innerHTML = this.state.initialArray[k];
+    }
+  }
   change(e) {
     this.state.length = e.target.value;
     this.createNewArray();
@@ -106,7 +166,9 @@ export default class SearchingVisualizer extends React.Component {
           <button id='LinearSearch' onClick={() => this.linearSearch()}>
             Linear Search
           </button>
-          <button id='BinarySearch'>Binary Search</button>
+          <button id='BinarySearch' onClick={() => this.binarySearch()}>
+            Binary Search
+          </button>
         </div>
         <div className='containers'>
           {this.state.initialArray.map((value, idx) => (
@@ -124,7 +186,9 @@ export default class SearchingVisualizer extends React.Component {
                 textAlign: "center",
               }}
             >
-              <p style={{ marginTop: "15px" }}>{value}</p>
+              <p className='value' style={{ marginTop: "15px" }}>
+                {value}
+              </p>
             </div>
           ))}
         </div>
