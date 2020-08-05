@@ -389,7 +389,7 @@ export default class SortingVisualizer extends React.Component {
           <p id='infoContainer2'></p>
         </div>
         <div id='bigcontainer'>
-          <div className='container' style={{ border: "2px solid black" }}>
+          <div className='container'>
             {this.state.initialArray.map((value, idx) => (
               <div
                 className='bars'

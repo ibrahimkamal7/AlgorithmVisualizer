@@ -87,12 +87,11 @@ export default class SearchingVisualizer extends React.Component {
   }
 
   binarySearch() {
-    this.sort();
-    console.log("1");
     const number = document.getElementById("number").value;
     if (number === "") {
       alert("Please enter a number to be searched");
     } else {
+      this.sort();
       this.disableButtons();
       document.getElementById("info").innerHTML = "";
       const arrayBars = document.getElementsByClassName("bars");
