@@ -10,7 +10,7 @@ class MainPage extends Component {
           <h1>Welcome to the Algorithm Visualizer</h1>
           <span>
             <a href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'>
-              <i class='fa fa-github' style={{ fontSize: "36px" }}></i>
+              <i className='fa fa-github' style={{ fontSize: "36px" }}></i>
             </a>
           </span>
         </div>

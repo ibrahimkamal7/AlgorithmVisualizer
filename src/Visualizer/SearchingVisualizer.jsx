@@ -8,8 +8,11 @@ export default class SearchingVisualizer extends React.Component {
     this.state = {
       initialArray: [],
       length: 15,
+      initialColor: "black",
+      comparisonColor: "blue",
+      foundColor: "green",
+      speed: 500,
     };
-    this.change = this.change.bind(this);
   }
 
   componentDidMount() {
@@ -42,7 +45,7 @@ export default class SearchingVisualizer extends React.Component {
     this.setState({ initialArray });
     var arrayBars = document.getElementsByClassName("bars");
     for (var i = 0; i < arrayBars.length; i++) {
-      arrayBars[i].style.backgroundColor = "black";
+      arrayBars[i].style.backgroundColor = this.state.initialColor;
     }
     document.getElementById("info").innerHTML = "";
   }
@@ -56,7 +59,7 @@ export default class SearchingVisualizer extends React.Component {
       document.getElementById("info").innerHTML = "";
       const arrayBars = document.getElementsByClassName("bars");
       for (var i = 0; i < arrayBars.length; i++) {
-        arrayBars[i].style.backgroundColor = "black";
+        arrayBars[i].style.backgroundColor = this.state.initialColor;
       }
       const animations = getLinearSearchAnimations(
         this.state.initialArray,
@@ -66,11 +69,11 @@ export default class SearchingVisualizer extends React.Component {
         const [idx, found] = animations[i];
         if (found) {
           setTimeout(() => {
-            arrayBars[idx].style.backgroundColor = "green";
+            arrayBars[idx].style.backgroundColor = this.state.foundColor;
             document.getElementById("info").innerHTML =
               "Entered number found at index " + i;
             this.enableButtons();
-          }, i * 1000);
+          }, i * this.state.speed);
           break;
         } else {
           setTimeout(() => {
@@ -79,8 +82,8 @@ export default class SearchingVisualizer extends React.Component {
                 "Entered number not found in the array";
               this.enableButtons();
             }
-            arrayBars[idx].style.backgroundColor = "blue";
-          }, i * 1000);
+            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
+          }, i * this.state.speed);
         }
       }
     }
@@ -96,7 +99,7 @@ export default class SearchingVisualizer extends React.Component {
       document.getElementById("info").innerHTML = "";
       const arrayBars = document.getElementsByClassName("bars");
       for (var i = 0; i < arrayBars.length; i++) {
-        arrayBars[i].style.backgroundColor = "black";
+        arrayBars[i].style.backgroundColor = this.state.initialColor;
       }
       const animations = getBinarySearchAnimations(
         this.state.initialArray,
@@ -107,11 +110,11 @@ export default class SearchingVisualizer extends React.Component {
         const [idx, found] = animations[i];
         if (found) {
           setTimeout(() => {
-            arrayBars[idx].style.backgroundColor = "green";
+            arrayBars[idx].style.backgroundColor = this.state.foundColor;
             document.getElementById("info").innerHTML =
               "Entered number found at index " + idx;
             this.enableButtons();
-          }, i * 1000);
+          }, i * this.state.speed);
           break;
         } else {
           setTimeout(() => {
@@ -120,8 +123,8 @@ export default class SearchingVisualizer extends React.Component {
                 "Entered number not found in the array";
               this.enableButtons();
             }
-            arrayBars[idx].style.backgroundColor = "blue";
-          }, i * 1000);
+            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
+          }, i * this.state.speed);
         }
       }
     }
@@ -143,10 +146,12 @@ export default class SearchingVisualizer extends React.Component {
       arrayBarsValue[k].innerHTML = this.state.initialArray[k];
     }
   }
-  change(e) {
+
+  change = (e) => {
     this.state.length = e.target.value;
     this.createNewArray();
-  }
+  };
+
   render() {
     return (
       <div>
