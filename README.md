@@ -18,6 +18,12 @@ This is an algorithm visualizer which can be used to visualize different sorting
 - Linear Search
 - Binary Search
 
+### Technologies Used
+
+- ReactJS
+- HTML
+- CSS
+
 ### How to run the visualizer
 
 - Navigate to the root directory of the project.
@@ -39,8 +45,10 @@ This is an algorithm visualizer which can be used to visualize different sorting
 - [src/Endpoints](https://github.com/ibrahimkamal7/AlgorithmVisualizer/tree/master/src/Endpoints): Contains the end-points which are being used
 - [src/Visualizer](https://github.com/ibrahimkamal7/AlgorithmVisualizer/tree/master/src/Visualizer): Contains the code for the Sorting and Searching Visualizer
 - [src/styles](https://github.com/ibrahimkamal7/AlgorithmVisualizer/tree/master/src/styles): css files for the project
-- Screenshots: Contains the screenshots of the project
+- [Screenshots](https://github.com/ibrahimkamal7/AlgorithmVisualizer/tree/master/ScreenShots): Contains the screenshots of the project
 
 ### Motivation
 
 - This project is inspired from Clément Mihailescu's [sorting-visualizer-tutorial](https://github.com/clementmihailescu/Sorting-Visualizer-Tutorial)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
