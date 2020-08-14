@@ -8,9 +8,9 @@ export default class SearchingVisualizer extends React.Component {
     this.state = {
       initialArray: [],
       length: 15,
-      initialColor: "black",
-      comparisonColor: "blue",
-      foundColor: "green",
+      initialColor: "teal",
+      comparisonColor: "salmon",
+      foundColor: "turquoise",
       speed: 500,
     };
   }
@@ -69,6 +69,10 @@ export default class SearchingVisualizer extends React.Component {
         const [idx, found] = animations[i];
         if (found) {
           setTimeout(() => {
+            for (var x = 0; x < arrayBars.length; x++) {
+              if (x !== idx)
+                arrayBars[x].style.backgroundColor = this.state.initialColor;
+            }
             arrayBars[idx].style.backgroundColor = this.state.foundColor;
             document.getElementById("info").innerHTML =
               "Entered number found at index " + i;
@@ -77,12 +81,15 @@ export default class SearchingVisualizer extends React.Component {
           break;
         } else {
           setTimeout(() => {
+            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
             if (i === animations.length - 1) {
+              for (var z = 0; z < arrayBars.length; z++) {
+                arrayBars[z].style.backgroundColor = this.state.initialColor;
+              }
               document.getElementById("info").innerHTML =
                 "Entered number not found in the array";
               this.enableButtons();
             }
-            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
           }, i * this.state.speed);
         }
       }
@@ -105,11 +112,14 @@ export default class SearchingVisualizer extends React.Component {
         this.state.initialArray,
         parseInt(number)
       );
-      console.log(animations);
       for (let i = 0; i < animations.length; i++) {
         const [idx, found] = animations[i];
         if (found) {
           setTimeout(() => {
+            for (var x = 0; x < arrayBars.length; x++) {
+              if (x !== idx)
+                arrayBars[x].style.backgroundColor = this.state.initialColor;
+            }
             arrayBars[idx].style.backgroundColor = this.state.foundColor;
             document.getElementById("info").innerHTML =
               "Entered number found at index " + idx;
@@ -118,12 +128,15 @@ export default class SearchingVisualizer extends React.Component {
           break;
         } else {
           setTimeout(() => {
+            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
             if (i === animations.length - 1) {
+              for (var y = 0; y < arrayBars.length; y++) {
+                arrayBars[y].style.backgroundColor = this.state.initialColor;
+              }
               document.getElementById("info").innerHTML =
                 "Entered number not found in the array";
               this.enableButtons();
             }
-            arrayBars[idx].style.backgroundColor = this.state.comparisonColor;
           }, i * this.state.speed);
         }
       }
@@ -181,7 +194,7 @@ export default class SearchingVisualizer extends React.Component {
               id={value}
               key={idx}
               style={{
-                backgroundColor: "black",
+                backgroundColor: "teal",
                 color: "white",
                 height: "50px",
                 width: "50px",

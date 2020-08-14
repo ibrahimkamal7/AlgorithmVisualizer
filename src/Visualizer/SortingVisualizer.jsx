@@ -48,9 +48,12 @@ export default class SortingVisualizer extends React.Component {
     }
     this.state.count = 0;
 
-    document.getElementById("infoContainer0").innerHTML = "";
-    document.getElementById("infoContainer1").innerHTML = "";
-    document.getElementById("infoContainer2").innerHTML = "";
+    document.getElementById("infoContainer0").innerHTML =
+      "Array 1; Size: " + this.state.length;
+    document.getElementById("infoContainer1").innerHTML =
+      "Array 2; Size: " + this.state.length;
+    document.getElementById("infoContainer2").innerHTML =
+      "Array 3; Size: " + this.state.length;
   }
 
   disableButtons() {
@@ -235,7 +238,6 @@ export default class SortingVisualizer extends React.Component {
       allArrayBars[arrayPosition]
     );
     const animations = getQuickSortAnimations(array);
-
     for (let i = 0; i < animations.length; i++) {
       const colorChange = i % 4 <= 1;
       if (colorChange) {
@@ -384,9 +386,9 @@ export default class SortingVisualizer extends React.Component {
           </button>
         </div>
         <div className='info'>
-          <p id='infoContainer0'></p>
-          <p id='infoContainer1'></p>
-          <p id='infoContainer2'></p>
+          <p id='infoContainer0'>Array 1</p>
+          <p id='infoContainer1'>Array 2</p>
+          <p id='infoContainer2'>Array 3</p>
         </div>
         <div id='bigcontainer'>
           <div className='container'>
