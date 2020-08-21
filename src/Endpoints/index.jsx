@@ -31,7 +31,7 @@ class MainPage extends Component {
               <td>Bubble Sort, Heap Sort, Merge Sort, Quick Sort</td>
               <td>
                 <a
-                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'
+                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer/blob/master/README.md'
                   target='_blank'
                 >
                   Link to the README file
@@ -49,7 +49,7 @@ class MainPage extends Component {
               <td>Linear Search and Binary Search</td>
               <td>
                 <a
-                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'
+                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer/blob/master/README.md'
                   target='_blank'
                 >
                   Link to the README file
