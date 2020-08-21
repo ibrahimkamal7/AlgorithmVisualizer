@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path='/' component={MainPage} />
+          <Route exact path='/AlgorithmVisualizer/' component={MainPage} />
           <Route
             exact
             path='/sorting-algorithm-visualizer'
@@ -27,7 +27,7 @@ class App extends Component {
             component={SearchingAlgorithmVisualizer}
           />
           <Route exact path='/404' component={Error} />
-          <Redirect to='/404' />
+          {/* <Redirect to='/404' /> */}
         </Switch>
       </Router>
     );
