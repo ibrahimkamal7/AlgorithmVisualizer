@@ -9,7 +9,10 @@ class MainPage extends Component {
         <div className='header-main'>
           <h1>Welcome to the Algorithm Visualizer</h1>
           <span>
-            <a href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'>
+            <a
+              href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'
+              target='_blank'
+            >
               <i className='fa fa-github' style={{ fontSize: "36px" }}></i>
             </a>
           </span>
@@ -27,7 +30,10 @@ class MainPage extends Component {
               <td>Sorting Visualizer</td>
               <td>Bubble Sort, Heap Sort, Merge Sort, Quick Sort</td>
               <td>
-                <a href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'>
+                <a
+                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'
+                  target='_blank'
+                >
                   Link to the README file
                 </a>
               </td>
@@ -42,7 +48,10 @@ class MainPage extends Component {
               <td>Searching Visualizer</td>
               <td>Linear Search and Binary Search</td>
               <td>
-                <a href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'>
+                <a
+                  href='https://github.com/ibrahimkamal7/AlgorithmVisualizer'
+                  target='_blank'
+                >
                   Link to the README file
                 </a>
               </td>
