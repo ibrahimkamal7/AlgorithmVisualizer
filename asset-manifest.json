@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ibrahimkamal7/AlgorithmVisualizer/static/css/main.54775b39.chunk.css",
-    "main.js": "/ibrahimkamal7/AlgorithmVisualizer/static/js/main.aede0b8e.chunk.js",
-    "main.js.map": "/ibrahimkamal7/AlgorithmVisualizer/static/js/main.aede0b8e.chunk.js.map",
-    "runtime-main.js": "/ibrahimkamal7/AlgorithmVisualizer/static/js/runtime-main.8cbf7a14.js",
-    "runtime-main.js.map": "/ibrahimkamal7/AlgorithmVisualizer/static/js/runtime-main.8cbf7a14.js.map",
-    "static/js/2.ee8980a4.chunk.js": "/ibrahimkamal7/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js",
-    "static/js/2.ee8980a4.chunk.js.map": "/ibrahimkamal7/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js.map",
-    "index.html": "/ibrahimkamal7/AlgorithmVisualizer/index.html",
-    "precache-manifest.110a843a9233d845e811bedd752e7ea4.js": "/ibrahimkamal7/AlgorithmVisualizer/precache-manifest.110a843a9233d845e811bedd752e7ea4.js",
-    "service-worker.js": "/ibrahimkamal7/AlgorithmVisualizer/service-worker.js",
-    "static/css/main.54775b39.chunk.css.map": "/ibrahimkamal7/AlgorithmVisualizer/static/css/main.54775b39.chunk.css.map",
-    "static/js/2.ee8980a4.chunk.js.LICENSE.txt": "/ibrahimkamal7/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js.LICENSE.txt"
+    "main.css": "/AlgorithmVisualizer/static/css/main.54775b39.chunk.css",
+    "main.js": "/AlgorithmVisualizer/static/js/main.41d0e9de.chunk.js",
+    "main.js.map": "/AlgorithmVisualizer/static/js/main.41d0e9de.chunk.js.map",
+    "runtime-main.js": "/AlgorithmVisualizer/static/js/runtime-main.0d34103b.js",
+    "runtime-main.js.map": "/AlgorithmVisualizer/static/js/runtime-main.0d34103b.js.map",
+    "static/js/2.ee8980a4.chunk.js": "/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js",
+    "static/js/2.ee8980a4.chunk.js.map": "/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js.map",
+    "index.html": "/AlgorithmVisualizer/index.html",
+    "precache-manifest.68ad1f9151e8f7d5c88bf01df2a67778.js": "/AlgorithmVisualizer/precache-manifest.68ad1f9151e8f7d5c88bf01df2a67778.js",
+    "service-worker.js": "/AlgorithmVisualizer/service-worker.js",
+    "static/css/main.54775b39.chunk.css.map": "/AlgorithmVisualizer/static/css/main.54775b39.chunk.css.map",
+    "static/js/2.ee8980a4.chunk.js.LICENSE.txt": "/AlgorithmVisualizer/static/js/2.ee8980a4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8cbf7a14.js",
+    "static/js/runtime-main.0d34103b.js",
     "static/js/2.ee8980a4.chunk.js",
     "static/css/main.54775b39.chunk.css",
-    "static/js/main.aede0b8e.chunk.js"
+    "static/js/main.41d0e9de.chunk.js"
   ]
 }
