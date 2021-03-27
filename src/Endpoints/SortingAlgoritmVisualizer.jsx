@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import SortingVisualizer from "../Visualizer/SortingVisualizer";
+import React from "react";
+import SortingVisualizer from "../Visualizer/Sorting";
 
-class SortingAlgorithmVisualizer extends Component {
-  render() {
-    return <SortingVisualizer />;
-  }
+function SortingAlgorithmVisualizer() {
+  return <SortingVisualizer />;
 }
 
 export default SortingAlgorithmVisualizer;

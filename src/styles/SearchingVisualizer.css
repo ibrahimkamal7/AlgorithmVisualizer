@@ -7,40 +7,6 @@
   justify-content: center !important;
   margin-top: 200px;
 }
-
-#LinearSearch,
-#BinarySearch {
-  height: 100px;
-  background-color: #002a44;
-  color: white;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  font-size: 14px;
-}
-
-button#LinearSearch {
-  margin-left: 450px;
-  margin-right: 75px;
-}
-
-button#BinarySearch {
-  margin-left: 40px;
-  cursor: pointer;
-  user-select: none;
-}
-
-button#LinearSearch:disabled {
-  color: red;
-  cursor: not-allowed;
-}
-
-button#BinarySearch:disabled {
-  color: red;
-  cursor: not-allowed;
-}
-
 #number {
   width: 50%;
   margin-left: 350px;
@@ -66,4 +32,17 @@ label {
 
 #size {
   cursor: pointer;
+}
+
+p#size-text {
+  margin: 0;
+}
+
+#number {
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 15%;
 }

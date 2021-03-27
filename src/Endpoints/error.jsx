@@ -1,13 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Error extends Component {
-  render() {
-    return (
-      <div>
-        <h1>404 Not Found</h1>
-      </div>
-    );
-  }
+function Error() {
+  return (
+    <div>
+      <h1>404 Not Found</h1>
+    </div>
+  );
 }
 
 export default Error;

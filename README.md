@@ -23,6 +23,7 @@ This is an algorithm visualizer which can be used to visualize different sorting
 - ReactJS
 - HTML
 - CSS
+- Material-UI
 
 ### How to run the visualizer
 
@@ -33,10 +34,9 @@ This is an algorithm visualizer which can be used to visualize different sorting
 
 ### How to use the visualizer
 
-- For sorting visualizer you are required to select three sorting algorithms and then you can click on **_Visualize Algorithms_** button to visualize them
+- For sorting visualizer you are required to select atleast one sorting algorithm and then you can click on **_Visualize Algorithms_** button to visualize them
 - You **_cannot_** visualize sorting algorithms if the arrays are already sorted
 - For searching visualizer, you are required to enter a number to be searched and then you can choose any of the two searching algorithms to visualize.
-- If you choose **_Binary Search_**, the visualizer will sort the array prior to performing binary search
 
 ### Repository Structure
 

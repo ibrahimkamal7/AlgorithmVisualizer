@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   HashRouter as Router,
   Route,
@@ -10,27 +10,25 @@ import SearchingAlgorithmVisualizer from "./Endpoints/SearchingAlgorithmVisualiz
 import MainPage from "./Endpoints/index.jsx";
 import Error from "./Endpoints/error.jsx";
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route exact path='/' component={MainPage} />
-          <Route
-            exact
-            path='/sorting-algorithm-visualizer'
-            component={SortingAlgorithmVisualizer}
-          />
-          <Route
-            exact
-            path='/seaching-algorithm-visualizer'
-            component={SearchingAlgorithmVisualizer}
-          />
-          <Route exact path='/404' component={Error} />
-          <Redirect to='/404' />
-        </Switch>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route
+          exact
+          path="/sorting-algorithm-visualizer"
+          component={SortingAlgorithmVisualizer}
+        />
+        <Route
+          exact
+          path="/seaching-algorithm-visualizer"
+          component={SearchingAlgorithmVisualizer}
+        />
+        <Route exact path="/404" component={Error} />
+        <Redirect to="/404" />
+      </Switch>
+    </Router>
+  );
 }
 export default App;

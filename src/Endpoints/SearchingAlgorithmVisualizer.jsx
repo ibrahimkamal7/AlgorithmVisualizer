@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import SearchingVisualizer from "../Visualizer/SearchingVisualizer";
+import React from "react";
+import SearchingVisualizer from "../Visualizer/Searching";
 
-class SearchingAlgorithmVisualizer extends Component {
-  render() {
-    return <SearchingVisualizer />;
-  }
+function SearchingAlgorithmVisualizer() {
+  return <SearchingVisualizer />;
 }
 
 export default SearchingAlgorithmVisualizer;
