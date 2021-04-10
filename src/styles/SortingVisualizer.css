@@ -8,7 +8,7 @@ label {
 }
 
 p {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 0.875rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
@@ -35,11 +35,21 @@ p {
 #quick {
   color: white;
 }
+#merge:disabled {
+  color: red;
+}
 
 span {
   color: white;
 }
 
-button {
-  background-color: #003da9;
+#generate,
+#go {
+  margin-left: 5px;
+  background-color: #90caf9;
+}
+
+#generate span,
+#go span {
+  color: black;
 }

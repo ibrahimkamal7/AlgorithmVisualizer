@@ -141,7 +141,7 @@ function SearchingVisualizer() {
       <div
         className="header"
         style={{
-          backgroundColor: "#003DA9",
+          backgroundColor: "black",
         }}
       >
         <Grid container spacing={3}>
@@ -156,8 +156,8 @@ function SearchingVisualizer() {
               Generate New Array
             </Button>
           </Grid>
-          <Grid item xs={3}>
-            <p id="size-text">Size</p>
+          <p id="size-text">Size</p>
+          <Grid item xs={2}>
             <Slider
               min={10}
               max={25}
@@ -214,12 +214,19 @@ function SearchingVisualizer() {
           </div>
         ))}
       </div>
-      <input
-        type="text"
-        id="number"
-        name="number"
-        placeholder="Enter the number to be searched"
-      />
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "20px",
+        }}
+      >
+        <input
+          type="text"
+          id="number"
+          name="number"
+          placeholder="Enter the number to be searched"
+        />
+      </div>
     </div>
   );
 }

@@ -271,99 +271,109 @@ function SortingVisualizer(props) {
   };
 
   return (
-    <div
-      className="header"
-      style={{
-        backgroundColor: "#003DA9",
-      }}
-    >
-      <Grid container spacing={3}>
-        <Grid item xs={2}>
-          <Button
-            variant="contained"
-            color="primary"
-            id="generate"
-            onClick={createNewArray}
-            disabled={buttonDisabled}
+    <div>
+      <div
+        className="header"
+        style={{
+          backgroundColor: "black",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <Grid container spacing={3}>
+          <Grid item xs={2}>
+            <Button
+              variant="contained"
+              color="primary"
+              id="generate"
+              onClick={createNewArray}
+              disabled={buttonDisabled}
+            >
+              Generate New Array
+            </Button>
+          </Grid>
+          <p id="continuous-slider">Size</p>
+          <Grid item xs={2}>
+            <Slider
+              min={10}
+              max={95}
+              value={length}
+              onChange={changeSize}
+              id="length"
+              aria-labelledby="continuous-slider"
+              disabled={sliderDisabled}
+            />
+          </Grid>
+          <div
+            style={{
+              marginTop: "15px",
+            }}
           >
-            Generate New Array
-          </Button>
-        </Grid>
-        <p id="continuous-slider">Size</p>
-        <Grid item xs={3}>
-          <Slider
-            min={20}
-            max={130}
-            value={length}
-            onChange={changeSize}
-            id="length"
-            aria-labelledby="continuous-slider"
-            disabled={sliderDisabled}
-          />
-        </Grid>
-        <FormGroup row>
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={change}
-                color="secondary"
-                id="merge"
-                disabled={mergeDisabled}
-                checked={mergeChecked}
+            <FormGroup row>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    onChange={change}
+                    color="secondary"
+                    id="merge"
+                    disabled={mergeDisabled}
+                    checked={mergeChecked}
+                  />
+                }
+                label="Merge Sort"
               />
-            }
-            label="Merge Sort"
-          />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={change}
-                color="secondary"
-                id="quick"
-                disabled={quickDisabled}
-                checked={quickChecked}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    onChange={change}
+                    color="secondary"
+                    id="quick"
+                    disabled={quickDisabled}
+                    checked={quickChecked}
+                  />
+                }
+                label="Quick Sort"
               />
-            }
-            label="Quick Sort"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={change}
-                color="secondary"
-                id="heap"
-                disabled={heapDisabled}
-                checked={heapChecked}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    onChange={change}
+                    color="secondary"
+                    id="heap"
+                    disabled={heapDisabled}
+                    checked={heapChecked}
+                  />
+                }
+                label="Heap Sort"
               />
-            }
-            label="Heap Sort"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={change}
-                color="secondary"
-                id="bubble"
-                disabled={bubbleDisabled}
-                checked={bubbleChecked}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    onChange={change}
+                    color="secondary"
+                    id="bubble"
+                    disabled={bubbleDisabled}
+                    checked={bubbleChecked}
+                  />
+                }
+                label="Bubble Sort"
               />
-            }
-            label="Bubble Sort"
-          />
-        </FormGroup>
-        <Grid item xs={3}>
-          <Button
-            variant="contained"
-            color="primary"
-            id="go"
-            onClick={go}
-            disabled={buttonDisabled}
-          >
-            Visualize Algorithms
-          </Button>
+            </FormGroup>
+          </div>
+          <Grid item xs={3}>
+            <Button
+              variant="contained"
+              color="primary"
+              id="go"
+              onClick={go}
+              disabled={buttonDisabled}
+            >
+              Visualize Algorithms
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
       <div className="container">
         {initialArray.map((value, idx) => (
           <div
@@ -375,6 +385,7 @@ function SortingVisualizer(props) {
               height: `${value}px`,
               width: "5px",
               display: "inline-block",
+              border: "0.1px solid white",
             }}
           ></div>
         ))}

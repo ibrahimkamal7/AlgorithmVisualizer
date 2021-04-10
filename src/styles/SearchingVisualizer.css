@@ -7,12 +7,10 @@
   justify-content: center !important;
   margin-top: 200px;
 }
+
 #number {
   width: 50%;
-  margin-left: 350px;
-  margin-top: 20px;
   height: 30px;
-  margin-right: 150px;
 }
 
 #info {
@@ -32,17 +30,22 @@ label {
 
 #size {
   cursor: pointer;
+  margin-top: 10px;
 }
 
 p#size-text {
-  margin: 0;
+  margin-top: 22px;
 }
 
-#number {
-  position: absolute;
-  left: 30%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 15%;
+#generate,
+#LinearSearch,
+#BinarySearch {
+  margin-left: 5px;
+  background-color: #90caf9;
+}
+
+#generate span,
+#LinearSearch span,
+#BinarySearch span {
+  color: black;
 }
