@@ -15,7 +15,6 @@ import Slider from "@material-ui/core/Slider";
 const initialColor = "#003DA9";
 const compareColor = "salmon";
 const sortedColor = "turquoise";
-
 const speed = 5;
 
 function SortingVisualizer(props) {
